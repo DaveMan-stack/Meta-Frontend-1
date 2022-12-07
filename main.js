@@ -13,7 +13,8 @@ const heroSec = document.querySelector('.hero-sec')
 const sliderDivsContainer = heroSec.querySelector('.container')
 const heroDivs = heroSec.querySelectorAll('.container > div')
 const sliderButtons = heroSec.querySelectorAll('i')
-
+const prevBtn = sliderButtons[0]
+const nextBtn = sliderButtons[1];
 //product-section variables
 let products = document.querySelectorAll('.product')
 
