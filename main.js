@@ -23,8 +23,8 @@ let products = document.querySelectorAll('.product')
 let cartCounter = document.querySelector('.cart-counter')
 
 menuBtn.addEventListener('click', () => {
-    navUl.classList.toggle('show-nav');
-    navUl.style.transition = 'all 1s'
+    nav.classList.toggle('show-nav');
+    nav.style.transition = 'all 1s'
     menuIcons.forEach(menuIcon => {
         menuIcon.classList.toggle('show-or-hide')
     })

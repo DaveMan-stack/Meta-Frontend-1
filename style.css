@@ -68,11 +68,9 @@ header {
 
 nav {
     font-size: 1rem;
-    margin-bottom: 40px;
     text-align: center;
     margin-left: 20px;
-    /* border: 2px solid blue; */
-    overflow: hidden;
+    height: 0;
 }
 
 nav .mobile-bars {
@@ -82,18 +80,17 @@ nav .mobile-bars {
     right: 0;
     font-size: 20px;
     padding: 25px 10px 0 0;
-    transition: all 1s;
+    transition: height 1s;
 
 }
 
 nav ul {
     width: 100%;
-    height: 0;
 }
 
-nav ul.show-nav {
+nav.show-nav {
     height: 230px;
-
+    margin-bottom: 40px;
 }
 
 .mobile-bars .fa-bars {
@@ -143,23 +140,32 @@ nav li#order-now{
     
 }
 
+nav .cart-link {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+nav .cart-link a, .cart-link i {
+    display: block;
+}
+
 nav li#cart {
     font-size: 20px;
     z-index: 0;
     position: relative;
     margin-top: 30px;
+    height: 60px;
+    
+
 }
 
 nav #cart .cart-counter {
     color: rgb(255, 255, 0);
-    margin-left: -17px;
-    top: -55%;
-    bottom: 0;
-    z-index: 1;
-    position: absolute;
     font-size: 18px;
+    
 }
-
 
 
 main {
@@ -298,7 +304,6 @@ main {
     position: relative;
     min-width: 130px;
     max-width: 200px;
-    border: 2px solid blue;
 }
 
 
@@ -439,7 +444,7 @@ section #products .product {
 }
 
 .product button {
-    left: 40%;
+    left: 35%;
     right: 50%;
     bottom: -15%;
     cursor: pointer;
@@ -447,7 +452,7 @@ section #products .product {
     padding: 6px;
     color: #fff;
     transition: all 2s;
-    
+    width: 100px;
 }
 
 
@@ -522,15 +527,20 @@ footer .copyright {
     }
 
     nav {
-        width: 70%;
+        width: 65%;
         text-align: right;
         position: absolute;
         padding: 0;
         margin-top: 20px;
+        height: auto;
     }
 
     nav ul {
         height: 40px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
     }
 
     nav li {
@@ -547,7 +557,7 @@ footer .copyright {
         display: none;
     }
 
-    nav li#order-now, #cart {
+    nav li#order-now{
         margin-top: 0;
         
         margin-left: 45px;
@@ -558,8 +568,11 @@ footer .copyright {
     }
 
     nav li#cart {
-        height: 30px;
-        margin-top: 10px;
+        
+        margin-top: 0;
+        width: 30px;
+        text-align: center;
+        margin-left: 35px;
     }
     
     
