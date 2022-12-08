@@ -22,6 +22,14 @@ let products = document.querySelectorAll('.product')
 //cart variable
 let cartCounter = document.querySelector('.cart-counter')
 
+// //making our slider to slider automatically
+// function sliderInterval() {
+//     counter++
+//     sliderDivsContainer.style.transform = `translateX(${counter * -100}%)`
+//     sliderDivsContainer.style.transition = 'transform 2s'
+// }
+// let sliderIntervalVar = null
+
 menuBtn.addEventListener('click', () => {
     nav.classList.toggle('show-nav');
     nav.style.transition = 'all 1s'
@@ -30,34 +38,32 @@ menuBtn.addEventListener('click', () => {
     })
 })
 
-heroDivs.forEach(div => {
-    div.addEventListener('mouseover', () => {
-        div.classList.add('fade')
-        sliderButtons.forEach(button => {
-            button.style.display = 'block';
-            
-        })
-        
-    })
-    
-    div.addEventListener('mouseout', () => {
-        div.classList.remove('fade')
-        sliderButtons.forEach(button => {
-            button.style.display = 'none';
-        })
-    })
 
+sliderDivsContainer.addEventListener('mouseover', () => {
+    heroSec.classList.add('fade')
     sliderButtons.forEach(button => {
-        button.addEventListener('mouseover', () => {
-            button.style.display = 'block';
-            div.classList.add('fade')
-        })
+        button.style.display = 'block';
         
-
     })
+})
+
+sliderDivsContainer.addEventListener('mouseout', () => {
+    heroSec.classList.remove('fade')
+    sliderButtons.forEach(button => {
+        button.style.display = 'none';
+    })
+})
+
+sliderButtons.forEach(button => {
+    button.addEventListener('mouseover', () => {
+        button.style.display = 'block';
+        heroSec.classList.add('fade')
+    })
+    
+
+})
 
     
-})
 
 // making our carousel slide
 let counter = 1;
@@ -74,6 +80,7 @@ nextBtn.addEventListener('click', (e) => {
 })
 
 prevBtn.addEventListener('click', (e) => {
+    
     if (counter == 0) return;
     counter--
     sliderDivsContainer.style.transform = `translateX(${counter * -100}%)`
