@@ -118,3 +118,23 @@ products.forEach(product => {
         cartCounter.innerText = increment
     })
 })
+
+
+//toggle theme 
+
+const body = document.body;
+const menuToggleIcon = document.querySelector('.toggle-theme')
+menuToggleIcon.addEventListener('click', () => {
+    body.classList.toggle('light-theme');
+    if (body.classList.contains('light-theme')) {
+        localStorage.setItem('CurrentTheme', 'lightTheme');
+    } else {
+        localStorage.removeItem('CurrentTheme', 'lightTheme');
+    }
+})
+
+// save theme even after browser refresh
+const currentTheme = localStorage.getItem('CurrentTheme');
+if (currentTheme) {
+    body.classList.add('light-theme');
+}

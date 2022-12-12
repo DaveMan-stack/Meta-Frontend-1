@@ -14,7 +14,11 @@
     <meta property="og:type" content="website">
     <meta property="og:description" content="This is a final project for a little lemon restaurant which is part of the meta frontend certification">
     <meta property="og:site_name" content="Our Menu">
+    
     <title>Little Lemon Restaurant | Home page</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="logos/Asset 9@4x.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -22,20 +26,23 @@
 </head>
 <body>
     <header>
-        <img src="logos/Asset 16@4x.png" alt="" srcset="">
+        <img class="logo-img" src="logos/Asset 16@4x.png" alt="" srcset="">
+        <nav>
+            <button class="mobile-bars">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-xmark"></i>
+            </button>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li id="order-now"><button href="#order">Order Now</button></li>
+                <li id="cart"><a class="cart-link" href="#cart"><a href="#" class="cart-counter">0</a><i class="fas fa-cart-plus"></i></a></li>
+                <li class="toggle-theme"><i class="ri-sun-line light-theme-icon"></i>
+                    <i class="ri-moon-line dark-theme-icon"></i></li>
+            </ul>
+        </nav>
     </header>
-    <nav>
-        <button class="mobile-bars">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-xmark"></i>
-        </button>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#products">Products</a></li>
-            <li id="order-now"><button href="#order">Order Now</button></li>
-            <li id="cart"><a class="cart-link" href="#cart"><a href="#" class="cart-counter">0</a><i class="fas fa-cart-plus"></i></a></li>
-        </ul>
-    </nav>
+    
     <main>
     
         <section class="hero-sec" id="home">
